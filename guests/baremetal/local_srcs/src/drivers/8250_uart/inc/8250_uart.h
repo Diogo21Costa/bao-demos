@@ -1,0 +1,24 @@
+/**
+ * SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) Bao Project and Contributors. All rights reserved.
+ */
+
+#ifndef __SERIAL_UART8250_H__
+#define __SERIAL_UART8250_H__
+
+#include <core.h>
+
+typedef uint32_t u32;
+typedef uint16_t u16;
+
+void uart8250_enable_rx_int();
+
+void uart8250_putc(char ch);
+
+int uart8250_getc(void);
+
+int uart8250_init(unsigned long base, u32 in_freq, u32 baudrate, u32 reg_shift, u32 reg_width);
+
+void uart8250_interrupt_handler();
+
+#endif

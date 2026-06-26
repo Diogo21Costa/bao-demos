@@ -17,8 +17,13 @@ struct config config = {
 
             .entry = 0x20000000,
 
+            .mem_throth = {
+                .budget = 30000,
+                .period_us = 10000,
+            },
+
             .platform = {
-                .cpu_num = 4,
+                .cpu_num = 1,
                 
                 .region_num = 1,
                 .regions =  (struct vm_mem_region[]) {
